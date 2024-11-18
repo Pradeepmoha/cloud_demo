@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Login with AI Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0&appId=3847924582132883"></script>
+
+  <div class="container">
+    <!-- Login Page -->
+    <div id="login-page" class="login-page">
+      <h2>Login with Facebook</h2>
+         <div class="d" id="d">
+        <div class="b" id="b">
+        <input type="text" id="a" placeholder="Enter user name" />
+        </div>
+        <div id="c" class="c">
+        <input type="password" id="a" placeholder="Enter password" />
+        </div>
+         </div>
+        
+      <button id="fb-login-btn">Login with Facebook</button>
+    </div>
+
+    <!-- Main Page -->
+    <div id="main-page" class="main-page">
+      <header>
+        <h2 id="welcome-message">Welcome, User!</h2>
+        <button id="logout-btn">Logout</button>
+      </header>
+      <div class="posts">
+        <h3>Your Profile</h3>
+        <p id="profile-name"></p>
+        <img id="profile-picture" alt="Profile Picture" width="100" height="100">
+      </div>
+
+      <div class="button-container">
+        <button id="view-posts-btn">View Posts</button>
+        <button id="expert-system-btn">Expert System</button>
+      </div>
+
+     
+    </div>
+
+    <!-- Expert System Section -->
+    <div class="chatbot-container" id="expert-system">
+      <div class="chatbot-messages" id="chatbot-messages"></div>
+      
+      <!-- Predefined Inputs Section -->
+      <div class="predefined-inputs">
+        <button onclick="sendPredefinedMessage('Facebook is a leading social media platform connecting billions of people worldwide')">What is Facebook?</button>
+        <button onclick="sendPredefinedMessage('The expert system uses predefined rules and AI to guide users.')">How does the expert system work?</button>
+        <button onclick="sendPredefinedMessage('Click on the View Posts button to browse Facebook posts .')">How to see posts?</button>
+        <button onclick="sendPredefinedMessage('Use the Forgot Password option to reset your Facebook password.')">about password retrieval?</button>
+      </div>
+      
+      <!-- Chatbot Input Section -->
+      <div class="chatbot-input">
+        <input type="text" id="chatbot-input" placeholder="Ask your question..." />
+        <button id="chatbot-send">Send</button>
+      </div>
+      <button class="close-expert-btn" onclick="closeExpertSystem()">Close</button>
+
+    </div>
+  
+  
+  <div id="post-c" class="post-c">
+    <!-- Posts Section -->
+    <div id="posts-page-kk" style="display:none;">
+      <div id="post-container">
+        <!-- Post 1 -->
+        <div class="fb-post" id="fb-post-1" data-href="https://www.facebook.com/photo/?fbid=1358263772238244&amp;set=a.989342232463735&amp;cft[0]=AZXQBAjAc6snicp-vQMX8194xxO_7jT0Qm8Z-WASY2cBOSsEQF1pr5dphEhTDTgks-cTtmHwCvgInpVAbqqH6r4BHZOHiEAaI_RBuW60xBY6fPWDspnOb6IUtSSCHI_G4tj5XCWEgRVB2Vd7yT36t9MR2W2GgwQ58rRv1mZK0baTc4MdyVhzU-PzRSVZsrmUaoDbFxoJE8AwqvGeFkoL549fZANZvlpNFF-Jf1Jz8drTlB-cmzhkYs1DdfDnQAgzUb0&amp;tn=EH-R" data-width="500" data-show-text="true">
+          <blockquote cite="https://www.facebook.com/Sport360Cricket/posts/1358263802238241" class="fb-xfbml-parse-ignore">
+            <p>Team India now has 12 different T20I centurions in men&#039;s cricket 🇮🇳💯</p>
+            <a href="https://www.facebook.com/Sport360Cricket">Sport360 Cricket</a> 
+            <span>Posted on: November 14, 2024</span>
+          </blockquote>
+        </div>
+        
+        
+        <!-- Post 2 -->
+        <div class="fb-post" id="fb-post-2" data-href="https://www.facebook.com/photo.php?fbid=1472617740803928&amp;set=t.100019577483175&amp;type=3" data-width="500" data-show-text="true" style="display:none;">
+          <blockquote cite="https://www.facebook.com/photo.php?fbid=1472617740803928&amp;set=a.487833612615684&amp;type=3" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/people/Jitendra-Yadav/100041671492883/">Jitendra Yadav</a>
+            <span>Posted on: July 1, 2024</span>
+          </blockquote>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="fb-post" id="fb-post-3" data-href="https://www.facebook.com/photo/?fbid=1119050363105269&amp;set=a.172781537732161&amp;cft[0]=AZXy_7-IsYrbNEQaIE0OnBg0DHKW59j5JiHU3axPd17m9_AkJG-oDPD3E2VzS6HXqpwEuiLBw4iN0rZTjZdE4xOadtlRB2TGyU6-55S4lKWzH9XZ3GuLq3aRfyOdTOPBgTLVxcadSuAbZXoFXJoKL_A0nw_IrMqapXQs_R-FHcez3EEYpSOHP-FPOwfG0qK7xw&amp;_tn=EH-R" data-width="500" data-show-text="true" style="display:none;">
+          <blockquote cite="https://www.facebook.com/GOALcomAfrica/posts/1119050379771934" class="fb-xfbml-parse-ignore">
+            <p>Cristiano Ronaldo's 910th goal in his career was a stunning scissor kick 🫠🚴‍♂🇵🇹</p>
+            <a href="https://www.facebook.com/GOALcomAfrica">GOAL Africa</a> 
+            <span>Posted on: November 15, 2024</span>
+          </blockquote>
+        </div>
+        <!-- post 4-->
+        <div class="fb-post" id="fb-post-4" data-href="https://www.facebook.com/photo/?fbid=886094546982068&amp;set=a.569614891963370&amp;cft[0]=AZWW-N2v5SfxCjfoLMlGZqga7Je3VtR6lZE_K5qVaefcfx-exVcVOZ2V5vgGSdks5JmazKDCTe8LBtiXmZHOXn-K-uTfnJo5jfSrJ6Bil380pm9NMjzLM-IGePxlVibI_8qREHv3w3nmFxyj3Mi-5pSSZ2hyMcL0QboDH_CFfdCnkq82T8sG_nlsk2MFL9AIo6k&amp;tn=EH-R" data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/the18soccer/posts/886094573648732" class="fb-xfbml-parse-ignore"><p>CRISTIANO RONALDO BICYCLE KICK! 😱🇵🇹 
+
+          39-year-old Cristiano Ronaldo made yet another appearance on the scoresheet for...</p><a href="https://www.facebook.com/the18soccer">The18</a> இடுகையிட்ட தேதி:&nbsp;<a href="https://www.facebook.com/the18soccer/posts/886094573648732">வெள்ளி, 15 நவம்பர், 2024</a></blockquote></div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="navigation-buttons">
+        <button id="prev-post-btn">Previous</button>
+        <button id="next-post-btn">Next</button>
+      </div>
+
+      <button class="close-view-posts-btn" onclick="closePosts()">Close</button>
+    </div>
+  </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

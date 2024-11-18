@@ -1,0 +1,312 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e9ecf1, #044261);
+    color: #333;
+  }
+
+  h2, h3 {
+    color: #1877f2;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  /* Login Page */
+  .login-page {
+    width: 350px;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  .b{
+  
+    padding: 1%;
+
+  }
+  .c{
+    padding-top: 10px;
+  }
+
+    .a{
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        border: #dceaf8;
+        outline: none;
+        padding:20px;
+       
+       
+    }
+  
+  .login-page button {
+    background: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    transition: background 0.3s ease;
+  }
+
+  .login-page button:hover {
+    background: #145dbb;
+  }
+
+  /* Main Page */
+  .main-page {
+    display: none;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background: rgb(229, 239, 246);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+  .post-c{
+    border-radius: 10px;
+    background: white;
+
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  header h2 {
+    margin: 0;
+  }
+
+  header button {
+    padding: 8px 15px;
+    font-size: 14px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  header button:hover {
+    background: #d93636;
+  }
+
+  /* Buttons for view posts and expert system */
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  #view-posts-btn, #expert-system-btn {
+    padding: 10px 20px;
+    background: #0f79ae;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    transition: background 0.3s ease;
+  }
+
+  #view-posts-btn:hover, #expert-system-btn:hover {
+    background: #1a04a8;
+  }
+
+  /* Post Section */
+  .post {
+    margin: 20px 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    background: #dbdfe2;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .post img {
+    width: 900%;
+    border-radius: 8px;
+    padding: 30px;
+  }
+
+  .post-actions {
+    margin-top: 100px;
+    text-align: right;
+  }
+
+  .post-actions button {
+    background-color: #1877f2;
+    color: rgb(50, 156, 218);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  .post-actions button:hover {
+    background-color: #145dbb;
+  }
+
+  /* Chatbot Styling */
+  .chatbot-container {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .chatbot-messages {
+    height: 200px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    background: rgb(171, 198, 209);
+    border-radius: 8px;
+  }
+
+  .chatbot-messages p {
+    margin: 5px 0;
+  }
+
+  .chatbot-messages strong {
+    color: #007bff;
+  }
+
+  .chatbot-input {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .chatbot-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+  }
+  .d-input{
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+
+  }
+
+  .chatbot-input button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .chatbot-input button:hover {
+    background: #0056b3;
+  }
+
+  .comment-section {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .close-expert-btn {
+    padding: 8px 15px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .close-expert-btn:hover {
+    background: #d93636;
+  }
+
+  .close-view-posts-btn {
+    padding: 8px 15px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .close-view-posts-btn:hover {
+    background: #d93636;
+    padding-left: 20px;
+  }
+
+  .main-page, .posts-page {
+transition: opacity 0.5s ease;
+}
+
+.hidden {
+opacity: 0;
+display: none;
+}
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .navigation-buttons button {
+   
+    background: #1877f2;
+    color: white;    
+    font-size: 16px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px
+  }
+  .predefined-inputs {
+display: flex;
+justify-content: center;
+margin-bottom: 15px;
+}
+
+.predefined-inputs button {
+margin: 0 5px;
+padding: 10px 15px;
+background: #007bff;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background 0.3s ease;
+}
+
+.predefined-inputs button:hover {
+background: #0056b3;
+}
